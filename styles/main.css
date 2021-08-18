@@ -130,8 +130,9 @@ header{
 }
 header > .title {
     min-width: 189px;
-    font-size: 29px;
+    font-size: min(9.5vw, 29px);
     color: var(--title-clr);
+    transition: padding 300ms ease-in-out;
 }
 .welcome-msg {
     color: #fffa;
@@ -285,6 +286,33 @@ a:visited { color: white; }
 
 
 
+@media (max-width: 450px){ 
+    header{
+        position: relative;
+        height: max-content;
+    }
+    .title {
+        font-size: 24px;
+        padding-left: 2px;
+    }
+    header > .title {
+        min-width: 125px;
+    }
+    .welcome-msg {
+        position: absolute;
+        top: 100%;
+    }
+    .navbox {
+        margin-left: auto;
+    }
+}
+@media (max-width: 300px){ 
+    .navbox {
+        margin-left: 12px;
+    }
+}
+
+
 
 /* Copy & Paste Templates */
 
@@ -322,4 +350,7 @@ a:visited { color: white; }
     outline: 1px solid #28f;
     outline-offset: 4px;
 }
+
+
+
 
