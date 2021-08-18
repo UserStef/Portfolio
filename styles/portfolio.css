@@ -1,0 +1,204 @@
+
+:root {
+    /* References: */
+    /* Layout Control */
+    /* --header-h: 37px; */
+    /* --content-h: calc(100vh - var(--header-h)); */
+
+    /* --content-bg: hsla(210, 0%, 7%, 89%); */
+    --content-bg: hsla(210, 0%, 7%, 9%);
+
+    --content-bdr: 
+    inset 0px 0px 0px 1px #fc2,
+    inset 0px 0px 0px 2px #000,
+    inset 0px 0px 0px 3px #fc2;
+}
+
+.content {
+    position: relative;
+    top: 0px;
+    height: var(--content-h);
+    width: 100vw;
+    overflow: scroll;
+    box-shadow: 
+    inset 0px 0px 0px 1px #fc2,
+    inset 0px 0px 0px 2px #000,
+    inset 0px 0px 0px 3px #fc2;
+    background: var(--content-bg);
+}
+.shelf {
+    width: max(500px, 96%);
+    margin: max(10px, 2%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    outline: 2px solid #28f;
+}
+.shelf > .title {
+    height: max-content;
+    width: max-content;
+    margin: 2vh;
+    padding: 0;
+}
+.xc { /* "Xa Content" - content area */
+    min-height: 80px;
+    height: 80%;
+    width: calc(100% - 2rem);
+    margin: 1rem;
+    border: 1px solid #fff;
+    /* outline: 2px solid #fc2;
+    outline-offset: .5rem; */
+}
+.shelf > .xc:hover,
+.shelf > .xc:focus {
+    outline: 2px solid #fc2;
+    outline-offset: .1rem;
+}
+
+.snap {
+    min-height: 100px;
+    min-width: 100px;
+    outline: 1px solid #fc2;
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.goto-btn {
+    width: max-content;
+
+    background: #1234;
+    text-shadow: 1px 1px 2px #0008;
+    border: 3px double #4567;
+    border-radius: 0px 10px;
+
+    padding: 4px 8px;
+    margin: 4px 8px;
+
+    cursor: pointer;
+    transition: 
+    background-color 200ms ease-in-out;
+}
+.goto-btn:hover {
+    background: #4567;
+    text-shadow: 
+    1px 1px 2px #0008,
+    1px 0px 1px #0008,
+    0px 1px 1px #0008;
+    font-weight: 600;
+    transition: 
+    background-color 200ms ease-in-out, 
+    text-shadow 100ms ease-in-out;
+}
+
+
+
+
+
+
+
+
+.deck {
+    position: relative;
+    top: 0px;
+    height: max(85vh, var(--content-h));
+    /* height: max(85vh, auto); */
+    width: 100vw;
+
+    box-shadow: 
+    inset 0px 0px 0px 1px #28f,
+    inset 0px 0px 0px 2px #000,
+    inset 0px 0px 0px 3px #28f;
+
+    color: white;
+    text-shadow: 
+    1px 1px 2px #000a,
+    1px 0px 1px #000a,
+    0px 1px 1px #000a;
+    
+    overflow: scroll;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background: var(--content-bg);
+}
+.card {
+    position: relative;
+    height: 75vh;
+    width: 40vh;
+    margin: 12px;
+    min-width: 278px;
+
+    background-image: linear-gradient(45deg, #123, #456, #789);
+    border-radius: 5px;
+    box-shadow: 12px 12px 4px -6px #1118;
+
+    display: flex;
+    align-items: center;
+    /* align-items: flex-start; */
+    justify-content: center;
+    flex-direction: column;
+
+    /* background-size: 100%, 1em 1em; */
+    /* border: 3px solid #ee8; */
+    /* box-shadow: inset 0px 0px 0px 2px #ee8; */
+}
+.card-s {
+    position: relative;
+    height: 75vh;
+    width: 40vh;
+    margin: 0px 8px;
+
+}
+.card-pattern {
+    background-image: 
+    radial-gradient( #0000, #000 75%),
+    repeating-conic-gradient(
+        from 45deg, 
+        #111 0deg 90deg, 
+        #222 90deg 180deg);
+    background-size: 100%, 1em 1em;
+    border: 3px solid #ee8;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 0px 2px #ee8;
+}
+
+.card > .title {
+    height: max-content;
+    width: max-content;
+    margin: 2vh auto;
+    padding: 0;
+}
+.card > .title:hover {
+    outline: 2px solid #28f;
+    outline-offset: .5rem;
+}
+.card > .xc:hover,
+.card > .xc:focus {
+    outline: 2px solid #28f;
+    outline-offset: .5rem;
+}
+
+.card > .scry {
+    position: absolute;
+    height: 30vh;
+    width: 30vh;
+    top: 8vh;
+    left: 5vh;
+}
+
+.card > .goto-btn {
+    position: absolute;
+    height: 5vh;
+    width: 20vh;
+    bottom: 3vh;
+    left: 12vh;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5vh;
+}
