@@ -75,7 +75,7 @@
     padding: 4px 8px;
     margin: 4px 8px;
 
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: 
     background-color 200ms ease-in-out;
 }
@@ -172,8 +172,8 @@
     padding: 0;
 }
 .card > .title:hover {
-    outline: 2px solid #28f;
-    outline-offset: .5rem;
+    /* outline: 2px solid #28f; */
+    /* outline-offset: .5rem; */
 }
 .card > .xc:hover,
 .card > .xc:focus {
@@ -201,4 +201,15 @@
     align-items: center;
     justify-content: center;
     font-size: 2.5vh;
+}
+
+.xci {
+    padding: 8px;
+    border-bottom: 1px solid #fff8;
+    display: flex;
+    flex-direction: column;
+}
+.xci a {
+    font-size: 20px;
+    align-self: center;
 }

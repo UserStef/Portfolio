@@ -17,7 +17,7 @@
         <div class="navbox" data-navbox="hidding"></div>
         <div id="nav" class="nav hidden">
             <div class="nav-btn" data-nav="home">Home</div>
-            <a href="https://github.com/UserStef/Resume"><div class="nav-btn" data-nav="resume">Resume</div></a>
+            <div class="nav-btn" data-nav="resume"><a href="https://github.com/UserStef/Resume">Resume</a></div>
             <div class="nav-btn" data-nav="projects">Projects</div>
             <div class="nav-btn" data-nav="lab">Experiments</div>
             <div class="nav-btn" data-nav="more">Other Skills</div>
@@ -27,13 +27,29 @@
     <div class="deck">
         <div class="card">
             <div class="title">Resume</div>
-            <div class="xc"> Loading... </div>
-            <a href="https://github.com/UserStef/Resume"><div class="goto-btn" data-nav="resume">Go to Resume</div></a>
+            <div class="xc">
+                <div class="xci"><a href="https://github.com/UserStef/Resume" class="link-to-project">Github Markdown</a></div>
+                <!-- <div class="xci"><a href="#" class="link-to-project">Web Version</a></div> -->
+                <div class="xci"><a href="https://www.linkedin.com/in/stefanodelatorre/" class="link-to-project">LinkedIn</a></div>
+            </div>
+            <div class="goto-btn" data-nav="resume"><a href="https://github.com/UserStef/Resume">Go to Resume</a></div>
+        </div>
+        <div class="card">
+            <div class="title">Assignments</div>
+            <div class="xc">
+                <div class="xci"><a href="https://userstef.github.io/WDD330_w21/" class="link-to-project">WDD330 - Web Frontend</a></div>
+                <div class="xci"><a href="https://sketchfab.com/UserStef" class="link-to-project">3D Modeling</a></div>
+            </div>
         </div>
         <div class="card">
             <div class="title">Projects</div>
-            <div class="xc"> Loading... </div>
-            <div class="goto-btn" data-nav="projects">Go to Projects</div>
+            <div class="xc">
+                <div class="xci">
+                    <a href="https://userstef.github.io/Reckoning/" class="link-to-project">Reckoning Time</a>
+                    <p>Web service for coordinating time. (still in progress.)</p>
+                </div>
+            </div>
+            <!-- <div class="goto-btn" data-nav="projects">Go to Projects</div> -->
         </div>
         <div class="card">
             <div class="title">Experiments</div>
