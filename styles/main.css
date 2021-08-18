@@ -174,14 +174,17 @@ a:visited { color: white; }
     border-radius: 5px;
     border: 0px solid #28f;
     cursor: pointer;
-    /* outline: 1px solid #fd58; */
 }
-.navbox:focus,
-.navbox:hover {
-    outline: 2px solid #28f;
+.navbox:hover,
+.navbox:focus {
+    animation: 200ms ease-in-out alternate infinite shake;
 }
-.navbox::after {
-    content: '';
+.navbox:focus { outline: 2px solid #28f; }
+@keyframes shake {
+    from { transform: rotate(10deg); }
+    to { transform: rotate(-10deg); }
+}
+.navarrow {
     position: absolute;
     top: 2px; left: 4px;
     height: 12px;
@@ -193,18 +196,18 @@ a:visited { color: white; }
     border-radius: 6px;
     transform-origin: 40% 50%;
     transform: rotate(45deg);
-    /* outline: 1px solid #f28; */
     transition: 200ms transform ease-in-out;
+    user-select: none;
 }
-.navbox:hover::after {
+.navbox-displaying .navarrow {
     transform: rotate(-45deg);
     transition: 200ms transform ease-in-out;
 }
 
 .nav {
     position: absolute;
-    top: 32px;
-    right: 12px;
+    top: 31px;
+    right: 0px;
     height: auto;
     width: 120px;
     margin: 6px auto;
@@ -212,8 +215,8 @@ a:visited { color: white; }
     display: grid;
     grid-auto-flow: row;
     grid-gap: 0px;
-    outline: 2px solid #28f;
-    outline-offset: 4px;
+    /* outline: 2px solid #28f; */
+    /* outline-offset: 4px; */
     z-index: 1;
 }
 
@@ -276,7 +279,9 @@ a:visited { color: white; }
     text-shadow 250ms ease-in-out; 
 }
 
-
+.nav-off {
+    color: hsla(210, 0%, 7%, 89%);
+}
 
 
 
@@ -317,3 +322,4 @@ a:visited { color: white; }
     outline: 1px solid #28f;
     outline-offset: 4px;
 }
+

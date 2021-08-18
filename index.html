@@ -14,9 +14,9 @@
     <header>
         <div class="title">St&eacute;fano De La Torre</div>
         <div id="welcome-msg" class="welcome-msg">Welcome to my Portfolio.</div>
-        <div class="navbox" data-navbox="hidding"></div>
+        <div id="navbox" class="navbox" data-navbox="hidding"><div class="navarrow" data-navbox="up"></div></div>
         <div id="nav" class="nav hidden">
-            <div class="nav-btn" data-nav="home">Home</div>
+            <div class="nav-btn" data-nav="home"><a href="#" data-nav="home">Home</a></div>
             <div class="nav-btn" data-nav="resume"><a href="https://github.com/UserStef/Resume">Resume</a></div>
             <div class="nav-btn" data-nav="projects">Projects</div>
             <div class="nav-btn" data-nav="lab">Experiments</div>
@@ -32,7 +32,7 @@
                 <!-- <div class="xci"><a href="#" class="link-to-project">Web Version</a></div> -->
                 <div class="xci"><a href="https://www.linkedin.com/in/stefanodelatorre/" class="link-to-project">LinkedIn</a></div>
             </div>
-            <div class="goto-btn" data-nav="resume"><a href="https://github.com/UserStef/Resume">Go to Resume</a></div>
+            <!-- <div class="goto-btn" data-nav="resume"><a href="https://github.com/UserStef/Resume">Go to Resume</a></div> -->
         </div>
         <div class="card">
             <div class="title">Assignments</div>
@@ -51,10 +51,15 @@
             </div>
             <!-- <div class="goto-btn" data-nav="projects">Go to Projects</div> -->
         </div>
-        <div class="card">
+        <div class="card hidden">
             <div class="title">Experiments</div>
-            <div class="xc"> Loading... </div>
-            <div class="goto-btn" data-nav="lab">Go to Experiments</div>
+            <div class="xc">
+                <div class="xci">
+                    <a href="https://userstefdlt.github.io/LibraryProject/" class="link-to-project">My Library</a>
+                    <p>To store and display styles I used in projects.</p>
+                </div>
+            </div>
+            <!-- <div class="goto-btn" data-nav="lab">Go to Experiments</div> -->
         </div>
     </div>
 

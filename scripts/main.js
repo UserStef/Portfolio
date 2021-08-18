@@ -6,18 +6,22 @@ window.addEventListener("click", (ev) =>{
     if(ev.target.dataset.navbox != null){
         console.log(` ── Navigation box: 💠 ${ev.target.dataset.navbox} 📍 ── `);
         let nav = document.getElementById('nav');
-        if(ev.target.dataset.navbox == "showing"){
+        let navbox = document.getElementById('navbox');
+        if(navbox.dataset.navbox == "showing"){
             nav.classList.add('hidden');
-            ev.target.dataset.navbox = "hidding";
+            navbox.dataset.navbox = "hidding";
+            navbox.classList.remove('navbox-displaying');
         } else {
+            navbox.classList.add('navbox-displaying');
             nav.classList.remove('hidden');
-            ev.target.dataset.navbox = "showing";
+            navbox.dataset.navbox = "showing";
         }
     }
     
-    // if(ev.target.dataset.nav == "home"){
-    //     console.log(" ── Navigating back: 💠 Home 📍 ── ");
-    // }
+    if(ev.target.dataset.nav == "home"){
+        console.log(" ── Navigating back: 💠 Home 📍 ── ");
+        document.getElementById('welcome-msg').innerHTML = `You are already here.`;
+    }
     // if(ev.target.dataset.nav != null){
     //     console.log(` ── Navigating to: 💠 ${ev.target.dataset.nav} 📍 ── `);
     //     let navTo = ev.target.dataset.nav;
