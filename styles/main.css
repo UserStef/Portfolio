@@ -80,6 +80,13 @@
     /* Layout Control */
     --header-h: 40px;
     --content-h: calc(100vh - var(--header-h));
+    
+    /* Permanent Dark Mode: (while adjusting a color scheme.) */
+    --pageBG: hsla(210, 89%, 0%, 100%);
+    --pageTxt: hsla(0, 0%, 89%, 100%);
+
+    --main-bg: hsla(210, 0%, 5%, 100%);
+    --main-clr: hsla(0, 0%, 89%, 100%);
 
 }
 @media (prefers-color-scheme: dark) {
