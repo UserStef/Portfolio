@@ -76,6 +76,7 @@ section a.nav-to:hover { text-decoration: none; }
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     overflow: clip;
 
     margin: .5rem 0;
