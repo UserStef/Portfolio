@@ -1,215 +1,184 @@
 
 :root {
-    /* References: */
-    /* Layout Control */
-    /* --header-h: 37px; */
-    /* --content-h: calc(100vh - var(--header-h)); */
+    --navto-resume-txt: 'My Resume';
 
-    /* --content-bg: hsla(210, 0%, 7%, 89%); */
-    --content-bg: hsla(210, 0%, 7%, 9%);
-
-    --content-bdr: 
-    inset 0px 0px 0px 1px #fc2,
-    inset 0px 0px 0px 2px #000,
-    inset 0px 0px 0px 3px #fc2;
+    --navto-linkedin-txt: 'LinkedIn';
+    --navto-linkedin-clr-1: #0a66c2;
+    --navto-linkedin-clr-2: #f3f2ef;
+    --navto-shdw-linkedin-before:
+        inset 0 0 0px 50px #0a66c2,
+        0 0 0px 0px #4440,
+        -50px 60px 0px -40px #f3f2ef,
+        50px -60px 0px -40px #f3f2ef,
+        -50px 60px 0px -40px #4440,
+        50px -60px 0px -40px #4440,
+        50px 65px 0px -20px #0a66c2,
+        -50px -65px 0px -20px #0a66c2,
+        50px 65px 0px -20px #4440,
+        -50px -65px 0px -20px #4440,
+        0px 0px 0px 120px #0a66c200;
+    --navto-shdw-linkedin-before-shadows:
+        inset 0 0 0px 50px #0a66c2,
+        0 0 5px 2px #222,
+        -60px 60px 0px -40px #f3f2ef,
+        60px -60px 0px -40px #f3f2ef,
+        -60px 60px 5px -38px #222,
+        60px -60px 5px -38px #222,
+        40px 60px 0px -20px #0a66c2,
+        -40px -60px 0px -20px #0a66c2,
+        40px 60px 3px -19px #222,
+        -40px -60px 3px -19px #222,
+        0px 0px 0px 120px #0a66c200;
+    
+    --navto-github-txt: 'GitHub';
+    --navto-github-clr-1: #0d1117;
+    --navto-github-clr-2: #c9d1d9;
+    --navto-shdw-github:
+        -50px 65px 0px -30px #171b22,
+        inset 0 0 0px 100px #0d1117,
+        50px -65px 0px -30px #c9d1d9;
+    --navto-shdw-github-before:
+        inset 10px 0 0px 10px #c9d1d9,
+        inset -10px 0 0px 10px #c9d1d9,
+        inset -15px 0 5px 12px #0d1117,
+        inset 15px 0 5px 12px #0d1117,
+        8px 0 5px -2px #0d1117,
+        -8px 0 5px -2px #0d1117,
+        inset 0 0 0px 50px #171b22,
+        0 0 0px 50px #171b22;
+    --navto-shdw-github-before-glow:
+        inset 10px 0 0px 10px #c9d1d9,
+        inset -10px 0 0px 10px #c9d1d9,
+        inset -15px 0 5px 12px #fb0,
+        inset 15px 0 5px 12px #0bf,
+        8px 0 5px -2px #fb0,
+        -8px 0 5px -2px #0bf,
+        inset 0 0 0px 50px #171b22,
+        0 0 0px 50px #171b22;
+    --navto-shdwt-github-after-glow:
+        1px 1px 1px #171b22,
+        0 2px 3px #fb0a,
+        0 -2px 3px #0bfa;
+    
+    --navto-reckoning-txt: 'Reckoning Time';
+    --navto-library-txt: 'My Library';
 }
 
-.content {
+section a:hover { text-decoration: none; }
+section a.nav-to:hover { text-decoration: none; }
+
+
+.nav-to {
     position: relative;
-    top: 0px;
-    height: var(--content-h);
-    width: 100vw;
-    overflow: scroll;
-    box-shadow: 
-    inset 0px 0px 0px 1px #fc2,
-    inset 0px 0px 0px 2px #000,
-    inset 0px 0px 0px 3px #fc2;
-    background: var(--content-bg);
-}
-.shelf {
-    width: max(500px, 96%);
-    margin: max(10px, 2%);
-    position: relative;
+    height: 100px;
+    width: 200px;
+
     display: flex;
-    flex-direction: column;
-    outline: 2px solid #28f;
-}
-.shelf > .title {
-    height: max-content;
-    width: max-content;
-    margin: 2vh;
-    padding: 0;
-}
-.xc { /* "Xa Content" - content area */
-    min-height: 80px;
-    height: 80%;
-    width: calc(100% - 2rem);
-    margin: 1rem;
-    border: 1px solid #fff;
-    /* outline: 2px solid #fc2;
-    outline-offset: .5rem; */
-}
-.shelf > .xc:hover,
-.shelf > .xc:focus {
-    outline: 2px solid #fc2;
-    outline-offset: .1rem;
-}
+    align-items: center;
+    justify-content: center;
+    overflow: clip;
 
-.snap {
-    min-height: 100px;
-    min-width: 100px;
-    outline: 1px solid #fc2;
-    margin: 8px;
-    display: flex;
-    flex-direction: column;
-}
+    margin: .5rem 0;
+    font-size: 1.5rem;
+    text-shadow: 0px 0px 0px transparent;
 
-.goto-btn {
-    width: max-content;
-
-    background: #1234;
-    text-shadow: 1px 1px 2px #0008;
-    border: 3px double #4567;
-    border-radius: 0px 10px;
-
-    padding: 4px 8px;
-    margin: 4px 8px;
-
-    /* cursor: pointer; */
-    transition: 
-    background-color 200ms ease-in-out;
-}
-.goto-btn:hover {
-    background: #4567;
-    text-shadow: 
-    1px 1px 2px #0008,
-    1px 0px 1px #0008,
-    0px 1px 1px #0008;
     font-weight: 600;
     transition: 
-    background-color 200ms ease-in-out, 
-    text-shadow 100ms ease-in-out;
+        box-shadow 800ms ease-in-out,
+        text-shadow 200ms ease-in-out;
 }
-
-
-
-
-
-
-
-
-.deck {
-    position: relative;
-    top: 0px;
-    height: max(85vh, var(--content-h));
-    /* height: max(85vh, auto); */
-    width: 100vw;
-
+.nav-to:hover {
     box-shadow: 
-    inset 0px 0px 0px 1px #28f,
-    inset 0px 0px 0px 2px #000,
-    inset 0px 0px 0px 3px #28f;
-
-    color: white;
-    text-shadow: 
-    1px 1px 2px #000a,
-    1px 0px 1px #000a,
-    0px 1px 1px #000a;
-    
-    overflow: scroll;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    background: var(--content-bg);
+        inset 0 0 0px 1px #0aff,
+        inset 0 0 2px 1px #0afa,
+        inset 0 0 4px 1px #0af5,
+        inset 0 0 10px 5px #0af2,
+        0 0 0px 1px #0aff,
+        0 0 2px 2px #0afa,
+        0 0 4px 3px #0af5,
+        0 0 10px 5px #0af2;
+    text-shadow: 2px 2px 2px #000;
+    font-weight: 600;
 }
-.card {
-    position: relative;
-    height: 75vh;
-    width: 40vh;
-    margin: 12px;
-    min-width: 278px;
-
-    background-image: linear-gradient(45deg, #123, #456, #789);
-    border-radius: 5px;
-    box-shadow: 12px 12px 4px -6px #1118;
-
-    display: flex;
-    align-items: center;
-    /* align-items: flex-start; */
-    justify-content: center;
-    flex-direction: column;
-
-    /* background-size: 100%, 1em 1em; */
-    /* border: 3px solid #ee8; */
-    /* box-shadow: inset 0px 0px 0px 2px #ee8; */
-}
-.card-s {
-    position: relative;
-    height: 75vh;
-    width: 40vh;
-    margin: 0px 8px;
-
-}
-.card-pattern {
-    background-image: 
-    radial-gradient( #0000, #000 75%),
-    repeating-conic-gradient(
-        from 45deg, 
-        #111 0deg 90deg, 
-        #222 90deg 180deg);
-    background-size: 100%, 1em 1em;
-    border: 3px solid #ee8;
-    border-radius: 5px;
-    box-shadow: inset 0px 0px 0px 2px #ee8;
-}
-
-.card > .title {
-    height: max-content;
-    width: max-content;
-    margin: 2vh auto;
-    padding: 0;
-}
-.card > .title:hover {
-    /* outline: 2px solid #28f; */
-    /* outline-offset: .5rem; */
-}
-.card > .xc:hover,
-.card > .xc:focus {
-    outline: 2px solid #28f;
-    outline-offset: .5rem;
-}
-
-.card > .scry {
+.nav-to::before,
+.nav-to::after {
+    content: '';
     position: absolute;
-    height: 30vh;
-    width: 30vh;
-    top: 8vh;
-    left: 5vh;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    z-index: -1;
+    transition: 
+        transform 400ms ease-in-out,
+        text-shadow 200ms ease-in-out,
+        color 200ms ease-in-out,
+        border-radius 400ms ease-in-out 100ms,
+        box-shadow 400ms ease-in-out 200ms;
+}
+.nav-to:hover::before,
+.nav-to:hover::after {
+    transition: 
+        transform 400ms ease-in-out,
+        text-shadow 200ms ease-in-out,
+        color 800ms ease-in-out 2000ms,
+        border-radius 400ms ease-in-out 100ms,
+        box-shadow 400ms ease-in-out;
+}
+.nav-to::before {
+    background-image: linear-gradient(
+        hsla(200, 100%, 50%, 0%), 
+        hsla(200, 100%, 50%, 10%), 
+        hsla(200, 100%, 50%, 50%));
 }
 
-.card > .goto-btn {
-    position: absolute;
-    height: 5vh;
-    width: 20vh;
-    bottom: 3vh;
-    left: 12vh;
-    text-align: center;
-
+.nav-linkedin {
+    color: var(--navto-linkedin-clr-2);
+}
+section:hover .nav-linkedin::before {
+    transform: rotate(60deg);
+    box-shadow: var(--navto-shdw-linkedin-before);
+}
+section:hover .nav-linkedin:hover::before {
+    box-shadow: var(--navto-shdw-linkedin-before-shadows);
+}
+.nav-linkedin::after {
+    /* content: 'LinkedIn';  */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.5vh;
+    color: var(--navto-linkedin-clr-2);
+}
+section:hover .nav-linkedin::after {
+    transform: rotate(0deg);
 }
 
-.xci {
-    padding: 8px;
-    border-bottom: 1px solid #fff8;
-    display: flex;
-    flex-direction: column;
+
+.nav-github { color: #eee; }
+section:hover .nav-github:hover {
+    text-shadow: var(--navto-shdwt-github-after-glow);
 }
-.xci a {
-    font-size: 20px;
-    align-self: center;
+section:hover .nav-github::before {
+    /* transform: rotate(60deg); */
+    transform: rotate(90deg) scale(.5, 2);
+    box-shadow: var(--navto-shdw-github-before);
+    border-radius: 80% 60% 60% 80%;
+}
+section:hover .nav-github:hover::before {
+    box-shadow: var(--navto-shdw-github-before-glow);
+}
+.nav-github::after {
+    /* content: 'GitHub';  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--navto-github-clr-2);
+    color: #eee;
+    border-radius: 40%;
+}
+section:hover .nav-github::after {
+    transform: rotate(0deg);
+    color: var(--navto-github-clr-2);
+}
+section:hover .nav-github:hover::after {
+    transform: rotate(0deg);
+    text-shadow: var(--navto-shdwt-github-after-glow);
 }
